@@ -1,0 +1,6 @@
+<app-card *ngFor="let card of cards; trackBy: trackCard" [title]=card.title [about]=card.about
+	[buttonTemplate]="card.id%2?buttonTemplateRef:undefined" (remove)=onRemove(card)>
+	<ng-template #buttonTemplateRef>
+		<button (click)=onClone(card)>Clone</button>
+	</ng-template>
+</app-card>

@@ -1,0 +1,12 @@
+<div class="card">
+	<div class="title-ctn">
+		<h3>{{ title }}</h3>
+	</div>
+	<div class="about-ctn">
+		<p>{{ about }}</p>
+	</div>
+	<div class="footer">
+		<button (click)=remove.emit()>Suppresion</button>
+		<ng-container [ngTemplateOutlet]=buttonTemplate></ng-container>
+	</div>
+</div>
